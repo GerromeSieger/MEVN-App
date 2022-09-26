@@ -11,8 +11,12 @@ services:
       - /usr/src/app/node_modules
     depends_on:
       - "mongo"
-  mongo:
-    image: "mongo"
 
-    ports:
-      - "27017:27017"
+  mongo:
+    image: mongo:4.4
+    ports: 
+      - 27017:27017
+    environment:
+      - MONGO-INITDB_ROOT_USERNAME=admin
+      - MONGO-INITDB_ROOT_PASSWORD=password
+    stdin_open: true

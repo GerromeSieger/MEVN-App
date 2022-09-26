@@ -1,14 +1,14 @@
-FROM node:6.11
+FROM node:8.12.0-alpine
 
-# Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Install app dependencies
 COPY package.json .
+
+RUN npm install express-validator@5.3.0 --save-exact
 
 RUN npm install
 
-# Bundle app source
 COPY . .
 
 EXPOSE 3000
+
