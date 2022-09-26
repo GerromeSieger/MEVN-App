@@ -4,13 +4,14 @@ WORKDIR /app
 
 COPY package.json .
 
-RUN npm install -g yarn
+#RUN npm install -g yarn
 
-RUN yarn install
+RUN npm install
 
 COPY . .
 
-#RUN npm install express-validator@5.3.0 --save-exact
+RUN npm install express-validator@5.3.0 --save-exact
+
 
 EXPOSE 3000
 

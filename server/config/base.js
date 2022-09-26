@@ -49,8 +49,8 @@ module.exports = {
 	db: {
 		uri: process.env.MONGODB_URI || "mongodb://mongo:27017/" + pkg.config.dbName + "-dev",
 		options: {
-			user: "admin",
-			pass: "password",
+			user: "",
+			pass: "",
 			keepAlive: 1,
 			useNewUrlParser: true
 		}
