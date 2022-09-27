@@ -40,7 +40,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/,
-				loaders: ["style-loader", "css-loader"]
+				loaders: ["style-loader", "css-loader"],
 			},
 			// ES6/7 syntax and JSX transpiling out of the box
 			{
